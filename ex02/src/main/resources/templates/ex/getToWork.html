@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>출퇴근 기록부</title>
+</head>
+<body>
+    <h3>상품정보</h3>
+    <form action="check" method="post">
+        이름<input type="text" name="name">
+        출근<input type="button" name="workTime">
+        퇴근<input type="button" name="leaveTime">
+        <input type="time" name="time" value="now()">
+        <button>저장</button>
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>개인정보</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>성별</th>
+        </tr>
+        <tr th:object="${memberVO}">
+            <td th:text="*{name}"></td>
+            <td th:text="*{age}"></td>
+            <!-- 'gender'는 키워드로 입력 받았기에 키워드 그대로 쓰면 된다-->
+            <!-- VO로 입력받은건 VO.key 값으로 입력 받으면 된다. -->
+            <td th:text="${gender}"></td>
+        </tr>
+    </table>
+</body>
+</html>
